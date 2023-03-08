@@ -1,0 +1,88 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+   display: flex;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   background: #000;
+}
+
+.clock-box {
+   position: relative;
+   height: 100px;
+   width: 320px;
+   background: linear-gradient(120deg, #ffea2d,#09fcdf, #fd0ee1);
+   border-radius: 10px;
+   animation: anime 2s linear infinite;
+   cursor: default;
+}
+
+.clock-box .display,
+.clock-box span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.clock-box .display {
+   height: 85px;
+   width: 305px;
+   text-align: center;
+   background: #111111;
+   border-radius: 6px;
+   z-index: 2;
+}
+
+.display #time {
+   color: #fff;
+   font-size: 48px;
+   line-height: 85px;
+   font-weight: 600;
+   background: linear-gradient(120deg, #edfd41, #26ffe9, #fd33e2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: anime 2s linear infinite;
+}
+
+@keyframes anime {
+   100% {
+      filter: hue-rotate(360deg);
+   }
+}
+
+.clock-box span {
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   background: inherit;
+   filter: blur(10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
